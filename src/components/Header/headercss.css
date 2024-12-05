@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parkinsans:wght@300..800&family=Roboto&display=swap');
 
 .bg-color {
-    background-color: rgb(137, 249, 137);
+    background-color: rgb(34, 239, 89);
 }
 
 .m {
@@ -18,5 +18,47 @@
 
 .logo {
     width: 200px;
-    margin-left: -94px;
+    margin-left: -10px;
+}
+
+.header{
+    display: flex;
+    background-color: rgba(166, 249, 166, 0.36);
+}
+
+.right-side{
+    display: flex;
+}
+.search-bar{
+    display: flex;
+
+}
+.search-bar input{
+    width: 600px;
+    height: 60px;
+    min-width: 150px;
+    border-radius: 40px;
+    margin-top:55px ;
+    margin-left:40px; 
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(165, 245, 165, 0.316);
+    border:none;
+    justify-content: center;
+    align-items: center;
+}
+.search-bar input:hover{
+    border: 1px solid black;
+}
+
+.search-bar button{
+    border: none;
+    width: 80px;
+    height: 60px;
+    background-color: rgba(165, 245, 165, 0.316);
+    border-radius: 40px;
+    margin-top: 55px;
+    gap: 4;
+
 }

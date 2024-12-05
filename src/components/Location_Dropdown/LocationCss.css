@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parkinsans:wght@300..800&family=Roboto&display=swap');
+
+.dropdown-button{
+    width: 180px;
+    height: 70px;
+    min-width: 150px;
+    border-radius: 5px;
+    border:1px solid black;
+    margin-top: 50px;
+    background-color: rgba(165, 245, 165, 0.316);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-left:50px; 
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+.dropdown-button:hover{
+    background-color: rgba(148, 145, 145, 0.59);
+}
+.location-name{
+    display: flex;
+    gap:10px;
+    text-align: center;
+}
+
+.city-name{
+    font-size: 14px;
+    text-align: start;
+}
