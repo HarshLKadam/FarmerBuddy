@@ -11,7 +11,7 @@ const LocationDrop = () => {
                         <span className='arrow'> <FaAngleDown /></span>
                     </span>
                     <span className='city-name'>Diva</span>
-
+          
                 </button>
             </div>
         </>

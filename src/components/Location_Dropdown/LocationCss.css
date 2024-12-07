@@ -2,24 +2,24 @@
 
 .dropdown-button{
     width: 180px;
-    height: 70px;
+    height: 60px;
     min-width: 150px;
     border-radius: 5px;
-    border:1px solid black;
+    border:1px solid rgb(93, 93, 93);
     margin-top: 50px;
     background-color: rgba(165, 245, 165, 0.316);
     display: flex;
     flex-direction: column;
     gap: 3px;
-    margin-left:50px; 
+    margin-left:30px; 
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     
 }
 .dropdown-button:hover{
-    background-color: rgba(148, 145, 145, 0.59);
+    background-color: rgba(61, 239, 41, 0.59);
 }
 .location-name{
     display: flex;

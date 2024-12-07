@@ -18,24 +18,25 @@
 
 .logo {
     width: 200px;
-    margin-left: -10px;
+    margin-left: 30px;
 }
 
 .header{
     display: flex;
-    background-color: rgba(166, 249, 166, 0.36);
+    background-color: rgba(169, 239, 169, 0.36);
+    height: 160px;
 }
 
-.right-side{
+.middle{
     display: flex;
 }
 .search-bar{
     display: flex;
-
+    position: relative;
 }
 .search-bar input{
     width: 600px;
-    height: 60px;
+    height: 50px;
     min-width: 150px;
     border-radius: 40px;
     margin-top:55px ;
@@ -44,9 +45,10 @@
     font-size: 16px;
     font-weight: bold;
     background-color: rgba(165, 245, 165, 0.316);
-    border:none;
+    border:1px solid rgb(93, 93, 93);
     justify-content: center;
     align-items: center;
+ 
 }
 .search-bar input:hover{
     border: 1px solid black;
@@ -54,11 +56,45 @@
 
 .search-bar button{
     border: none;
-    width: 80px;
-    height: 60px;
     background-color: rgba(165, 245, 165, 0.316);
     border-radius: 40px;
-    margin-top: 55px;
-    gap: 4;
+    margin-top: 60px;
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    z-index: 10;
+}
 
+.right-side{
+    display: flex;
+}
+.user-profile{
+    width: 50px;
+    height: 50px;
+    margin-top: 55px;
+     border: none;
+    border-radius: 50px;
+    background-color: rgba(165, 245, 165, 0.316);
+    margin-left: 30px;
+    border: 1px solid rgb(93, 93, 93); 
+}
+
+.cart{
+    display: flex;
+}
+.cart-price{
+    margin-left: 9px;
+    margin-top: 65px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.cart-button{
+    width: 50px;
+    height: 50px;
+    margin-top: 55px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(165, 245, 165, 0.316);
+    border: 1px solid rgb(93, 93, 93); 
+    margin-left: 20px;
 }
