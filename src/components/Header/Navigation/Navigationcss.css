@@ -1,0 +1,23 @@
+nav{
+    background-color: rgba(191, 230, 191, 0.279);
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.categories{
+    width: 180px;
+    margin-left: 26px;
+    height: 60px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: rgb(116, 229, 98);
+    border: 1px solid rgb(70, 67, 67);
+}
+
+.categories span{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+}

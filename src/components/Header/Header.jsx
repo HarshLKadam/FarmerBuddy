@@ -1,11 +1,14 @@
 import React from 'react';
 import './headercss.css';
-import { CiSearch } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Logo from '../../assets/logo-removebg-preview.png';
 import { Link } from 'react-router-dom';
 import LocationDrop from '../Location_Dropdown/LocationDrop';
+import SearchBox from './SearchBox/SearchBox';
+import Navigation from './Navigation/Navigation';
+
+
 
 const Header = () => {
     return (
@@ -30,15 +33,7 @@ const Header = () => {
 
                         <LocationDrop />
 
-
-                        <div className="search-bar">
-                            <input type="text"
-                                className='search-input'
-                                placeholder='Stock up on freshness and flavor—discover it here!' />
-                            <button> <CiSearch style={{ fontSize: '30px' }} /></button>
-                        </div>
-
-
+                        <SearchBox />
                     </div>
 
                     <div className="right-side">
@@ -51,14 +46,17 @@ const Header = () => {
 
                         <div className="cart">
                             <button className="cart-button">
-                            <AiOutlineShoppingCart style={{ fontSize: "25px", }}/>
+                                <AiOutlineShoppingCart style={{ fontSize: "25px", }} />
                             </button>
                             <div className='cart-price'> 100 Rs</div>
                         </div>
                     </div>
                 </div>
-
-
+                
+                <nav>
+                    <Navigation/>
+                </nav>
+               
             </div>
         </>
     );
