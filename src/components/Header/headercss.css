@@ -44,7 +44,7 @@
      border: none;
     border-radius: 50px;
     background-color: rgba(165, 245, 165, 0.316);
-    margin-left: 30px;
+    margin-left: 40px;
     border: 1px solid rgb(93, 93, 93); 
 }
 
@@ -56,6 +56,12 @@
     margin-top: 40px;
     font-size: 16px;
     font-weight: bold;
+    border: 1px solid rgb(233, 222, 222);
+    height: 30px;
+    width:80px;
+    text-align: center;
+    border-radius: 35px;
+    background-color: rgba(192, 234, 192, 0.541);
 }
 .cart-button{
     width: 50px;
@@ -65,6 +71,6 @@
     border-radius: 50px;
     background-color: rgba(165, 245, 165, 0.316);
     border: 1px solid rgb(93, 93, 93); 
-    margin-left: 20px;
+    margin-left: 35px;
 }
 

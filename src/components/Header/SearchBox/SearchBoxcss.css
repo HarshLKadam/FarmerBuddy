@@ -1,6 +1,7 @@
 .search-bar{
     display: flex;
     position: relative;
+    margin-left: 50px;
 }
 .search-bar input{
     width: 600px;
@@ -26,9 +27,9 @@
     border: none;
     background-color: rgba(165, 245, 165, 0.316);
     border-radius: 40px;
-    margin-top: 60px;
     position: absolute;
     right: 25px;
-   bottom: 58px;
+   bottom: 52px;
     z-index: 10;
+    cursor: pointer;
 }

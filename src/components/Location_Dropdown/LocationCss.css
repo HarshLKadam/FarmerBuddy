@@ -31,3 +31,101 @@
     font-size: 14px;
     text-align: start;
 }
+
+
+.location .MuiPaper-root{
+     background-color: rgb(247, 255, 247);
+     padding: 25px;
+     font-size: 14px;
+     font-weight: bold;
+     position: relative;
+}
+
+.city-search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .city-search input {
+    padding: 12px 60px 12px 15px; /* Extra padding for the button space */
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid rgb(200, 200, 200); /* Light Gray */
+    border-radius: 30px; /* Smooth round edges */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .city-search input:focus {
+    border-color: rgb(76, 175, 80); /* Green focus */
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2); /* Green glow */
+  }
+  
+  .city-search button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* No background */
+    border: none; /* No border */
+    padding: 10px;
+    border-radius: 50%; /* Circular button */
+    color: rgb(76, 175, 80); /* Green text */
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: none; /* No shadow */
+    transition: color 0.3s ease;
+  }
+  
+  .city-search button:hover {
+    color: rgb(60, 150, 65); /* Darker green text on hover */
+  }
+  
+  .city-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .city-list li {
+    width: 100%;
+  }
+  
+  .city-list button {
+    background-color: rgb(241, 241, 241); /* Very Light Gray */
+    border: 1px solid rgb(221, 221, 221); /* Light Gray */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left; /* Align button text to the left */
+    width: 100%;
+  }
+  
+  .city-list button:hover {
+    background-color: rgb(76, 175, 80); /* Green */
+    color: rgb(255, 255, 255); /* White */
+    border-color: rgb(76, 175, 80); /* Green */
+  }
+  
+  
+  .close{
+    position: absolute;
+    width: 30px;
+    right: 20px;
+    border-radius: 20px;
+    border: none;
+    top:10px;
+    background-color: white;
+  }
+  .close:hover{
+    background-color: rgb(208, 208, 208);
+  }
