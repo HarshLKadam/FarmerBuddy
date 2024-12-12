@@ -7,10 +7,15 @@ import { Link } from 'react-router-dom';
 import LocationDrop from '../Location_Dropdown/LocationDrop';
 import SearchBox from './SearchBox/SearchBox';
 import Navigation from './Navigation/Navigation';
+import { useContext } from 'react';
+import { MyContext } from '../../App';
 
 
 
 const Header = () => {
+
+    const context=useContext(MyContext)
+
     return (
         <>
             <div className="header-wrapper">
@@ -30,8 +35,9 @@ const Header = () => {
                     </div>
 
                     <div className="middle">
-
-                        <LocationDrop />
+                    {
+                        context.cityList.length!==0 && <LocationDrop />
+                    }
 
                         <SearchBox />
                     </div>

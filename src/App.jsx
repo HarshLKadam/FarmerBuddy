@@ -6,47 +6,55 @@ import Header from './components/Header/Header';
 import { createContext, useEffect, useState } from 'react';
 import axios from 'axios'
 
-const  MyContext=createContext();
+const MyContext = createContext();
 
 function App() {
 
-  const [countryList,setCountryList]=useState([])
+  const [cityList, setCityList] = useState([])
 
 
   const getCountry = (url) => {
     const apiKey = import.meta.env.VITE_CITY_API_KEY;
-    
+
     axios.get(url, {
       headers: {
         'X-CSCAPI-KEY': apiKey
       }
-    }).then((response) => {
-      console.log(JSON.stringify(response.data));
+     })
+    .then((response) => {
+      const citys = response.data;
+      console.log(citys.name);
+      const cityname = citys.map((city) =>(
+        city.name
+      ) )
+      console.log(cityname)
+      setCityList(cityname);
+
     })
-    .catch((error) => {
-      console.log(error);
-    });
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
 
   useEffect(() => {
-    const url=import.meta.env.VITE_CITY_API_URL
+    const url = import.meta.env.VITE_CITY_API_URL
     getCountry(url);
   }, []);
 
 
-  const values={
-
+  const values = {
+      cityList
   }
 
   return (
     <>
       <BrowserRouter>
-      <MyContext.Provider value={values}>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <MyContext.Provider value={values}>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
         </MyContext.Provider>
       </BrowserRouter>
     </>
@@ -55,5 +63,5 @@ function App() {
 
 export default App;
 
-export {MyContext}
+export { MyContext }
 

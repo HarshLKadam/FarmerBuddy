@@ -109,6 +109,10 @@
     text-align: left; /* Align button text to the left */
     width: 100%;
   }
+
+  .city-list button .active{
+    background-color: rgb(74, 239, 37);
+  }
   
   .city-list button:hover {
     background-color: rgb(76, 175, 80); /* Green */
