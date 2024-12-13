@@ -11,8 +11,6 @@ const MyContext = createContext();
 function App() {
 
   const [cityList, setCityList] = useState([])
-  const[cityName,setCityName]=useState()
-
 
   const getCountry = (url) => {
     const apiKey = import.meta.env.VITE_CITY_API_KEY;
@@ -24,7 +22,6 @@ function App() {
      })
     .then((response) => {
       const citys = response.data;
-      console.log(citys.name);
       const cityname = citys.map((city) =>(
         city.name
       ) )
@@ -46,8 +43,6 @@ function App() {
 
   const values = {
       cityList,
-      cityName,
-      setCityName,
   }
 
   return (

@@ -42,18 +42,22 @@ nav{
 
 .navbar-list{
     display: flex;
-    gap: 5px;
     margin-top: 10px;
-
+    gap: 10px;
 }
-.nav{
+
+.nav button{
     font-size: 18px;
     font-weight: bold;
     font-family: "Lato", sans-serif;
     padding: 5px 25px;
     border-radius: 30px;
+    border: none;
+    background-color: rgb(175, 255, 175);
 }
 
-.nav:hover{
+.nav button:hover{
     background-color: rgba(61, 239, 41, 0.59);
+    color: white;
+    font-weight: normal;
 }

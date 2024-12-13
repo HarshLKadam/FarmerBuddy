@@ -2,6 +2,7 @@ import React from 'react'
 import '../Navigation/Navigationcss.css'
 import { TbMenu2 } from "react-icons/tb";
 import { FaChevronDown } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     return (
@@ -18,19 +19,51 @@ const Navigation = () => {
 
                     <div className="part-2">
                         <ul className='navbar-list'>
-                            <li className="nav home">HOME</li>
-                            <li className="nav meats">MEAT</li>
-                            <li className="nav makery">BAKERY</li>
-                            <li className="nav beverage">DRINKS</li>
-                            <li className="nav blog">GROCERY</li>
-                            <li className="nav fruits">FRUITS</li>
-                            <li className="nav contact">CONTACT</li>
-                            <li className="nav about">ABOUT</li>
+                            <li className="nav home">
+                                <Link to='/'>
+                                    <button>HOME</button>
+                                </Link>
+                            </li>
+                            <li className="nav meats">
+                                <Link to='/'>
+                                    <button>MEAT</button>
+                                </Link>
+                            </li>
+                            <li className="nav bakery">
+                                <Link to='/'>
+                                    <button>BAKERY</button>
+                                </Link>
+                            </li>
+                            <li className="nav drink">
+                            <Link to='/'>
+                                    <button> DRINKS</button>
+                                </Link>
+                            </li>
+                            <li className="nav grocery">
+                            <Link to='/'>
+                                    <button>  GROCERY</button>
+                                </Link>
+                            </li>
+                            <li className="nav fruits">
+                            <Link to='/'>
+                                    <button> FRUITS</button>
+                                </Link>
+                            </li>
+                            <li className="nav contact">
+                            <Link to='/'>
+                                    <button> CONTACT</button>
+                                </Link>
+                            </li>
+                            <li className="nav contact">
+                            <Link to='/'>
+                                    <button> CONTACT</button>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                
+
             </nav>
 
 
