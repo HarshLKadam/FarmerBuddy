@@ -11,6 +11,7 @@ const MyContext = createContext();
 function App() {
 
   const [cityList, setCityList] = useState([])
+  const[cityName,setCityName]=useState()
 
 
   const getCountry = (url) => {
@@ -44,7 +45,9 @@ function App() {
 
 
   const values = {
-      cityList
+      cityList,
+      cityName,
+      setCityName,
   }
 
   return (

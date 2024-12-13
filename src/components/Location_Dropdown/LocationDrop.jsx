@@ -14,14 +14,14 @@ const LocationDrop = () => {
     const context = useContext(MyContext)
 
     const [isOpenModel, setIsOpenModel] = useState(false);
-
     const[selectedCity,setSelectedCity]=useState(null);
     const[cityList,setCityList]=useState([]);
+    const[cityName,setCityName]=useState('')
 
-    const selectCity = (index) => {
+    const selectCity = (item,index) => {
         setSelectedCity(index)
-        alert(index)
-        setIsOpenModel(false)
+        setCityName(item)
+        setIsOpenModel(false)  
     }
 
     useEffect(()=>{
@@ -49,7 +49,7 @@ const LocationDrop = () => {
                     <span className='location-name'>Your Location
                         <span className='arrow'> <FaAngleDown /></span>
                     </span>
-                    <span className='city-name'>{selectedCity}</span>
+                    <span className='city-name'>{cityName!==""? cityName:'Select Location'}</span>
 
                 </button>
             </div>
@@ -79,7 +79,7 @@ const LocationDrop = () => {
                         cityList.map((item, index) => {
                             return (
                                 <li key={index}>
-                                    <button onClick={() => selectCity(index)}
+                                    <button onClick={() => selectCity(item,index)}
                                         className={`${selectedCity ===index ? 'active':''}`}>{item}</button>
                                 </li>
                             );
