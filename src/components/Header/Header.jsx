@@ -4,45 +4,38 @@ import { FaRegUser } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Logo from '../../assets/logo-removebg-preview.png';
 import { Link } from 'react-router-dom';
-import LocationDrop from '../Location_Dropdown/LocationDrop';
+import LocationDrop from '../Header/Location_Dropdown/LocationDrop';
 import SearchBox from './SearchBox/SearchBox';
 import Navigation from './Navigation/Navigation';
 import { useContext } from 'react';
 import { MyContext } from '../../App';
+import Top from './Top/Top';
 
 
 
 const Header = () => {
 
-    const context=useContext(MyContext)
+    const context = useContext(MyContext)
 
     return (
         <>
             <div className="header-wrapper">
-                <div className="full-width-strip bg-color m">
-                    <div className="container">
-                        <p className="mb-0 mt-0 text-center welcome ">
-                            "Welcome to FarmerBuddy – Empowering Farmers, Connecting Communities!"
-                        </p>
-                    </div>
-                </div>
+                <Top />
 
                 <div className="header">
+
                     <div className=' left-side'>
                         <Link to={'/'}>
                             <img src={Logo} alt="logo" className='logo' />
                         </Link>
                     </div>
 
-                    <div className="middle">
-                    {
-                        context.cityList.length!==0 && <LocationDrop />
-                    }
-
-                        <SearchBox />
-                    </div>
-
                     <div className="right-side">
+                        
+                        <div className='start'>
+                            { context.cityList.length !== 0 && <LocationDrop /> }
+                            <SearchBox />
+                        </div>
 
                         <div className="user">
                             <button className='user-profile'>
@@ -58,11 +51,11 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                
+
                 <nav>
-                    <Navigation/>
+                    <Navigation />
                 </nav>
-               
+
             </div>
         </>
     );

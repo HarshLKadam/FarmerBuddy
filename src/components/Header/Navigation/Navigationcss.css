@@ -66,8 +66,8 @@ nav {
 
 .all {
     position: absolute;
-    left: 18px;
-    bottom: 72px;
+    left: 50px;
+    bottom: 100px;
     background-color: rgba(159, 243, 146, 0.841);
     box-shadow: 0 4px 8px rgba(11, 11, 11, 0.1);
     border-radius: 4px;

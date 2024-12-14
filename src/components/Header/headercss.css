@@ -1,40 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parkinsans:wght@300..800&family=Roboto&display=swap');
 
-.bg-color {
-    background-color: rgb(34, 239, 89);
-}
 
-.m {
-    margin-bottom: -22px;
-}
-.welcome {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    padding: 4px;
-    margin-bottom: 10px;
-    margin-left:100px;
-}
 .header-wrapper{
   border-bottom: 1px solid rgb(152, 139, 139);
 }
+
+.left-side{
+    display: inline;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 35px;
+    margin-top: -10px;
+}
+
 .logo {
     width: 150px;
-    margin-left: 30px;
 }
 
 .header{
-    display: flex;
-    margin-top: 18px;
-    height: 125px;
-}
-
-.middle{
-    display: flex;
+     display: flex;
+     justify-content: space-around;
 }
 
 
 .right-side{
+    display: flex;
+    border-left: 1px solid rgb(156, 147, 147);
+    padding-right: 40px;
+    margin-left: 20px;
+    margin-top: -15px;
+    margin-bottom: 30px;   
+}
+
+.start{
     display: flex;
 }
 
@@ -45,15 +43,26 @@
      border: none;
     border-radius: 50px;
     background-color: rgba(165, 245, 165, 0.316);
-    margin-left: 40px;
+    margin-left: 30px;
     border: 1px solid rgb(93, 93, 93); 
 }
 
 .cart{
     display: flex;
 }
+
+.cart-button{
+    width: 50px;
+    height: 50px;
+    margin-top: 32px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(165, 245, 165, 0.316);
+    border: 1px solid rgb(93, 93, 93); 
+    margin-left: 20px;
+}
 .cart-price{
-    margin-left: 9px;
+    margin-left: 5px;
     margin-top: 40px;
     font-size: 16px;
     font-weight: bold;
@@ -64,14 +73,5 @@
     border-radius: 35px;
     background-color: rgba(192, 234, 192, 0.541);
 }
-.cart-button{
-    width: 50px;
-    height: 50px;
-    margin-top: 32px;
-    border: none;
-    border-radius: 50px;
-    background-color: rgba(165, 245, 165, 0.316);
-    border: 1px solid rgb(93, 93, 93); 
-    margin-left: 35px;
-}
+
 
