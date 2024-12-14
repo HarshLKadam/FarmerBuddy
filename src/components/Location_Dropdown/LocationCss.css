@@ -70,14 +70,14 @@
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: transparent; /* No background */
-    border: none; /* No border */
+    background-color: transparent; 
+    border: none; 
     padding: 10px;
-    border-radius: 50%; /* Circular button */
-    color: rgb(76, 175, 80); /* Green text */
+    border-radius: 50%; 
+    color: rgb(76, 175, 80);
     font-size: 20px;
     cursor: pointer;
-    box-shadow: none; /* No shadow */
+    box-shadow: none; 
     transition: color 0.3s ease;
   }
   
