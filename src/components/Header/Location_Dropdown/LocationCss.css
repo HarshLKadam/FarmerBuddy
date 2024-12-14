@@ -119,17 +119,14 @@
     color: rgb(255, 255, 255); /* White */
     border-color: rgb(76, 175, 80); /* Green */
   }
-  
-  
-  .close{
+  .close {
     position: absolute;
     width: 30px;
-    right: 20px;
-    border-radius: 20px;
+    top: 15px;
+    right: 150px; /* Ensure it's aligned correctly */
+    z-index: 1000; /* Place above the dialog */
     border: none;
-    top:10px;
-    background-color: white;
+    background: transparent;
+    cursor: pointer;
   }
-  .close:hover{
-    background-color: rgb(208, 208, 208);
-  }
+  

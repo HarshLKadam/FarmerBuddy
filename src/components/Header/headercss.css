@@ -25,7 +25,8 @@
 
 .right-side{
     display: flex;
-    border-left: 1px solid rgb(156, 147, 147);
+    gap: 20px;
+    /* border-left: 1px solid rgb(156, 147, 147); */
     padding-right: 40px;
     margin-left: 20px;
     margin-top: -15px;
@@ -43,7 +44,6 @@
      border: none;
     border-radius: 50px;
     background-color: rgba(165, 245, 165, 0.316);
-    margin-left: 30px;
     border: 1px solid rgb(93, 93, 93); 
 }
 
@@ -59,8 +59,8 @@
     border-radius: 50px;
     background-color: rgba(165, 245, 165, 0.316);
     border: 1px solid rgb(93, 93, 93); 
-    margin-left: 20px;
 }
+
 .cart-price{
     margin-left: 5px;
     margin-top: 40px;

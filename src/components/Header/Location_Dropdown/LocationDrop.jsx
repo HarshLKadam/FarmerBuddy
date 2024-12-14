@@ -2,7 +2,7 @@ import Dialog from '@mui/material/Dialog';
 import { FaAngleDown } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
 import { IoCloseSharp } from "react-icons/io5";
-import './LocationCss.css'
+import '../Location_Dropdown/LocationCss.css'
 import { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { MyContext } from '../../../App';
@@ -61,9 +61,7 @@ const LocationDrop = () => {
                     onClick={() => {
                         setIsOpenModel(false)
                     }}>
-
                     <IoCloseSharp style={{ fontSize: '30px' }} />
-
                 </button>
 
                 <div className="city-search">

@@ -74,7 +74,7 @@ const Navigation = () => {
                             </li>
                             <li className="nav contact">
                                 <Link to='/'>
-                                    <button> CONTACT</button>
+                                    <button> ABOUT</button>
                                 </Link>
                             </li>
                         </ul>
