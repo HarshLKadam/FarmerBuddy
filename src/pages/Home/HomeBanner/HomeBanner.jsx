@@ -2,10 +2,10 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import banner1 from '../../assets/home-banner4.jpeg';
-import banner2 from '../../assets/home-banner-2.jpg';
-import banner3 from '../../assets/home-banner1.webp';
-import banner4 from '../../assets/home-banner3.jpg';
+import banner1 from '../../../assets/home-banner4.jpeg';
+import banner2 from '../../../assets/home-banner-2.jpg';
+import banner3 from '../../../assets/home-banner1.webp';
+import banner4 from '../../../assets/home-banner3.jpg';
 import '../HomeBanner/HomeBannerCss.css'
 
 const HomeBanner = () => {

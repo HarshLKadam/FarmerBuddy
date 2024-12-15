@@ -1,0 +1,17 @@
+.line{
+    width: 100%;
+    border: 1px solid rgb(182, 176, 176);
+    margin-top: 10px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+}
+.left img{
+    padding: 20px;
+    border: 1px solid rgb(183, 177, 177);
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 25px;
+}
