@@ -1,17 +1,96 @@
-.line{
-    width: 100%;
-    border: 1px solid rgb(182, 176, 176);
-    margin-top: 10px;
-}
+
 .left{
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
+
 .left img{
-    padding: 20px;
-    border: 1px solid rgb(183, 177, 177);
     width: 300px;
     margin-top: 20px;
     margin-left: 50px;
-    border-radius: 25px;
+ 
+}
+
+.ad-container{
+    border-right: 1px solid rgb(169, 161, 161);
+    width: 380px;
+}
+
+.homeProducts{
+    display: flex;
+}
+
+.head{
+    display: flex;
+    margin-left: 30px;
+    gap: 400px;
+}
+.title{
+    margin-top:10px ;
+}
+.cap{
+    font-size: 24px;
+    font-weight: bold;
+}
+.title .bottom{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(121, 117, 117, 0.784);
+}
+
+.view-all{
+    margin-top: 20px;
+}
+.view-all button{
+    padding: 5px 20px;
+    border: 1px solid rgb(145, 140, 140);
+    border-radius: 20px;
+    background-color: rgba(14, 254, 14, 0.519);
+}
+
+.view-all button:hover{
+    background-color: rgb(94, 236, 94);
+}
+
+.slick-arrow {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(119, 115, 115);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    content: '';
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev::after,
+.slick-next::after {
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    color: black;
+}
+
+.slick-prev::after {
+    content: '\2039';
+}
+
+.slick-next::after {
+    content: '\203A';
 }
