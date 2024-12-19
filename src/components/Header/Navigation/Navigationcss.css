@@ -49,6 +49,7 @@ nav {
   display: flex;
   margin-top: 10px;
   gap: 10px;
+
 }
 
 .nav button {
@@ -59,6 +60,7 @@ nav {
   border-radius: 30px;
   border: none;
   background-color: rgb(175, 255, 175);
+  color: black;
 }
 
 .nav button:hover {
@@ -79,6 +81,7 @@ nav {
   width: 200px;
   opacity: 6;
   display: none;
+ 
 }
 
 .all.block {
