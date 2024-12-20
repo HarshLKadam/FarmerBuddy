@@ -79,7 +79,43 @@
     gap: 5px ;
 }
 
+.mySwiper {
+    width: 80%;
+    height: auto;
+  }
+  
+  .home .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .swiper-button-next,
+.swiper-button-prev {
+  color: #000; /* Change the color as needed */
+  width: 40px;
+  height: 40px;
+}
 
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px; /* Adjust size */
+}
+
+.mySwiper {
+    width: 100%;
+    position: relative;
+  }
+  
+  .swiper {
+    padding: 0 40px; /* Add padding to prevent buttons from clipping */
+  }
+  
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    z-index: 10;
+  }
+  
 
   

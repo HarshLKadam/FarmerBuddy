@@ -1,15 +1,19 @@
 import React from 'react'
-import { CiSearch } from "react-icons/ci";
-import '../SearchBox/SearchBoxcss.css'
+import Button from '@mui/material/Button';
 
 const SearchBox = () => {
     return (
         <>
-            <div className="search-bar">
+            <div className="search flex relative gap-3 items-center">
                 <input type="text"
-                    className='search-input'
-                    placeholder='Stock up on freshness and flavor—discover it here!' />
-                <button> <CiSearch style={{ fontSize: '30px' }} /></button>
+                    placeholder='Search a freashness'
+                    className=' px-10 w-[100%] border-2 mt-2 p-2' />
+                <Button
+                    sx={{ backgroundColor: '#58f158', color: 'black' }}
+                    variant="contained"
+                >
+                    Search
+                </Button>
             </div>
         </>
     )
