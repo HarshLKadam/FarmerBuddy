@@ -1,90 +1,47 @@
 import React, { useState } from 'react'
-import '../Location_Dropdown/LocationDrop'
-import '../Navigation/Navigationcss.css'
-import { TbMenu2 } from "react-icons/tb";
-import { FaChevronDown } from "react-icons/fa";
-import { IoCloseSharp } from "react-icons/io5";
+import Button from '@mui/material/Button';
+import { IoReorderThreeOutline } from "react-icons/io5";
+import { LiaTruckSolid } from "react-icons/lia";
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
 
-     const [isOpen,setIsOpen]=useState(false)
-
     return (
         <>
-            <nav>
-                <div className="navigation-bar">
-                    <div className="part-1">
-                        <div className="cate-wrapper">
-                            <button className="categories" onClick={()=>setIsOpen(true)}>
-                                <span className='menu-icon'>  <TbMenu2 /></span>
-                                <span >All Categories</span>
-                                <span className='arrow-icon'><FaChevronDown /></span>
-                            </button>
-                            <div className={`all ${isOpen ? 'block' : ''}`}>
-                            <button className='close' onClick={()=>setIsOpen(false)}><IoCloseSharp style={{ fontSize: '30px' }} /></button>
-                              <ul>
-                                <li><Link to='/'><button className='list-btn first'>Fruits</button></Link></li>
-                                <li><Link to='/'><button className='list-btn'>Vegitables</button></Link></li>
-                                <li><Link to='/'><button className='list-btn'>Meat and Eggs</button></Link></li>
-                                <li><Link to='/'><button className='list-btn'>Bakery</button></Link></li>
-                                <li><Link to='/'><button className='list-btn'>Grocery</button></Link></li>
-                                <li><Link to='/'><button className='list-btn'>Drinks</button></Link></li>
-                              </ul>
-                            </div>
-                        </div>
+            <div className="navigation border-b-2 pb-2">
+                <div className="container flex items-center justify-between ">
+
+                    <div className="part-1 mt-2 w-[20%]">
+                        <Button className='text-black border flex justify-center items-center gap-2 bg-green-400'
+                            sx={{ backgroundColor: '#58f158', color: 'black' }} >
+                            <IoReorderThreeOutline style={{ fontSize: 40 }} />
+                            <div className='font-bold '>Shop by Categories</div>
+                        </Button>
                     </div>
 
-                    <div className="part-2">
-                        <ul className='navbar-list'>
-                            <li className="nav home">
-                                <Link to='/'>
-                                    <button>HOME</button>
-                                </Link>
+                    <div className="part-2 w-[45%] mt-3">
+                        <ul className='flex justify-between'>
+                            <li className='list-none border-r-2 border-l-2 px-4'>
+                                <Link to="/" className='no-underline font-bold text-[18px] text-black'><Button  sx={{ backgroundColor: '#58f158', color: 'black' }}>HOME </Button></Link>
                             </li>
-                            <li className="nav meats">
-                                <Link to='/'>
-                                    <button>MEAT</button>
-                                </Link>
+                            <li className='list-none border-r-2 px-4'>
+                                <Link to="/about" className='no-underline font-bold text-[18px] text-black'><Button  sx={{ backgroundColor: '#58f158', color: 'black' }}>ABOUT US </Button> </Link>
                             </li>
-                            <li className="nav bakery">
-                                <Link to='/'>
-                                    <button>BAKERY</button>
-                                </Link>
+                            <li className='list-none border-r-2 px-4'>
+                                <Link to="/contact" className='no-underline font-bold text-[px] text-black'><Button  sx={{ backgroundColor: '#58f158', color: 'black' }}>CONTACT US </Button></Link>
                             </li>
-                            <li className="nav drink">
-                                <Link to='/'>
-                                    <button> DRINKS</button>
-                                </Link>
-                            </li>
-                            <li className="nav grocery">
-                                <Link to='/'>
-                                    <button>  GROCERY</button>
-                                </Link>
-                            </li>
-                            <li className="nav fruits">
-                                <Link to='/'>
-                                    <button> FRUITS</button>
-                                </Link>
-                            </li>
-                            <li className="nav contact">
-                                <Link to='/'>
-                                    <button> CONTACT</button>
-                                </Link>
-                            </li>
-                            <li className="nav contact">
-                                <Link to='/'>
-                                    <button> ABOUT</button>
-                                </Link>
+                            <li className='list-none border-r-2 px-4'>
+                                <Link to="/contact" className='no-underline font-bold text-[px] text-black'><Button  sx={{ backgroundColor: '#58f158', color: 'black' }}>NEW </Button> </Link>
                             </li>
                         </ul>
                     </div>
+
+                    <div className="part3 flex  items-center justify-end gap-2 w-[35%]">
+                        <LiaTruckSolid  style={{ fontSize: 30}} />
+                        <p className='mt-3'> Free Delivery for Daily customers</p>
+                    </div>
                 </div>
-
-
-            </nav>
-
-
+            </div>
         </>
     )
 }

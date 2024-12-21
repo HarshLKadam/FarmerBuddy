@@ -10,8 +10,10 @@ import { useContext } from 'react';
 import { MyContext } from '../../App';
 import SearchBox from './SearchBox/SearchBox';
 import Top from './Top/Top';
+import  Navigation  from '../../components/Header/Navigation/Navigation.jsx';
 
 import { Link } from 'react-router-dom';
+
 
 const Header = () => {
 
@@ -34,7 +36,7 @@ const Header = () => {
                 <Top />
             </div>
 
-            <div className="header-1 border-b-2 p-3">
+            <div className="header-1 border-b-2 p-2">
                 <div className="container flex justify-between">
 
                     <div className="first w-[25%]">
@@ -80,7 +82,8 @@ const Header = () => {
 
                 </div>
             </div>
-
+            
+            <Navigation/>
         </>
     );
 }
