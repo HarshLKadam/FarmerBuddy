@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { LiaTruckSolid } from "react-icons/lia";
 import { Link } from 'react-router-dom';
+import CategoryPannel from '../CategoryPannel/CategoryPannel';
 
 const Navigation = () => {
 
@@ -12,11 +13,7 @@ const Navigation = () => {
                 <div className="container flex items-center justify-between ">
 
                     <div className="part-1 mt-2 w-[20%]">
-                        <Button className='text-black border flex justify-center items-center gap-2 bg-green-400'
-                            sx={{ backgroundColor: '#58f158', color: 'black' }} >
-                            <IoReorderThreeOutline style={{ fontSize: 40 }} />
-                            <div className='font-bold '>Shop by Categories</div>
-                        </Button>
+                    <CategoryPannel/>
                     </div>
 
                     <div className="part-2 w-[45%] mt-3">
@@ -42,6 +39,7 @@ const Navigation = () => {
                     </div>
                 </div>
             </div>
+           
         </>
     )
 }

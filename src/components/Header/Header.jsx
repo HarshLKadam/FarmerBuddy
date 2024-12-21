@@ -8,9 +8,9 @@ import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import { useContext } from 'react';
 import { MyContext } from '../../App';
-import SearchBox from './SearchBox/SearchBox';
-import Top from './Top/Top';
-import  Navigation  from '../../components/Header/Navigation/Navigation.jsx';
+import SearchBox from '../SearchBox/SearchBox.jsx';
+import Top from '../Top/Top.jsx';
+import  Navigation  from '../Navigation/Navigation.jsx';
 
 import { Link } from 'react-router-dom';
 

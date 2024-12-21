@@ -2,10 +2,10 @@ import Dialog from '@mui/material/Dialog';
 import { FaAngleDown } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
 import { IoCloseSharp } from "react-icons/io5";
-import '../Location_Dropdown/LocationCss.css'
+import './LocationCss.css'
 import { useEffect, useState } from 'react';
 import { useContext } from 'react';
-import { MyContext } from '../../../App';
+import { MyContext } from '../../App';
 
 
 
