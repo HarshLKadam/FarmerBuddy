@@ -3,7 +3,6 @@ import banner1 from '../../../assets/home-banner4.jpeg';
 import banner2 from '../../../assets/home-banner-2.jpg';
 import banner3 from '../../../assets/home-banner1.webp';
 import banner4 from '../../../assets/home-banner3.jpg';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,11 +11,11 @@ import { Navigation, Keyboard,Autoplay } from 'swiper/modules';
 
 const HomeBanner = () => {
   return (
-    <div className="container py-2">
+    <div className="container py-2 px-4">
     <Swiper
       navigation={true}
       autoplay={{
-        delay: 1000, 
+        delay: 3000, 
         disableOnInteraction: true, 
       }}
       keyboard={true}

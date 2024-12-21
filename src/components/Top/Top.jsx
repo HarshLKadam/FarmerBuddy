@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Top = () => {
     return (
-        <div className="top-strip  border-b-2 bg-green-400 ">
+        <div className="top-strip flex-wrap border-b-2 bg-green-400 ">
             <div className="container  flex justify-between">
                 <div>
                     <p className='font-bold text-[18px]'>
