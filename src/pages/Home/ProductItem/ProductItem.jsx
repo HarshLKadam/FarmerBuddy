@@ -7,9 +7,9 @@ import Stack from '@mui/material/Stack';
 
 const ProductItem = () => {
     return (
-        <div className='product-items ml-[60px] mt-2 flex flex-wrap gap-4'>
+        <div className='product-items ml-[70px] mt-2 flex flex-wrap gap-4'>
 
-            <div className="item w-[200px] h-[340px] border p-4 shadow-lg">
+            <div className="item w-[200px] h-[340px] border p-4 shadow-lg cursor-pointer transition-all ease-in-out hover:scale-105">
                 <div className="image overflow-hidden object-cover mb-4">
                     <img src={pd3} alt="" />
                 </div>
@@ -40,7 +40,7 @@ const ProductItem = () => {
                 </div>
             </div>
 
-            <div className="item w-[200px] h-[340px] border p-4 shadow-lg">
+            <div className="item w-[200px] h-[340px] border p-4 shadow-lg cursor-pointer transition-all ease-in-out hover:scale-105">
                 <div className="image overflow-hidden object-cover mb-4">
                     <img src={pd3} alt="" />
                 </div>
@@ -71,7 +71,7 @@ const ProductItem = () => {
                 </div>
             </div>
 
-            <div className="item w-[200px] h-[340px] border p-4 shadow-lg">
+            <div className="item w-[200px] h-[340px] border p-4 shadow-lg cursor-pointer transition-all ease-in-out hover:scale-105">
                 <div className="image overflow-hidden object-cover mb-4">
                     <img src={pd3} alt="" />
                 </div>
@@ -102,7 +102,7 @@ const ProductItem = () => {
                 </div>
             </div>
 
-            <div className="item w-[200px] h-[340px] border p-4 shadow-lg">
+            <div className="item w-[200px] h-[340px] border p-4 shadow-lg cursor-pointer transition-all ease-in-out hover:scale-105">
                 <div className="image overflow-hidden object-cover mb-4">
                     <img src={pd3} alt="" />
                 </div>
@@ -133,7 +133,7 @@ const ProductItem = () => {
                 </div>
             </div>
 
-            <div className="item w-[200px] h-[340px] border p-4 shadow-lg">
+            <div className="item w-[200px] h-[340px] border p-4 shadow-lg cursor-pointer transition-all ease-in-out hover:scale-105">
                 <div className="image overflow-hidden object-cover mb-4">
                     <img src={pd3} alt="" />
                 </div>
@@ -164,7 +164,7 @@ const ProductItem = () => {
                 </div>
             </div>
 
-            <div className="item w-[200px] h-[340px] border p-4 shadow-lg">
+            <div className="item w-[200px] h-[340px] border p-4 shadow-lg cursor-pointer transition-all ease-in-out hover:scale-105">
                 <div className="image overflow-hidden object-cover mb-4">
                     <img src={pd3} alt="" />
                 </div>

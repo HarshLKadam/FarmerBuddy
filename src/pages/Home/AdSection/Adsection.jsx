@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaTruckFast } from "react-icons/fa6";
 
+
 const Adsection = () => {
   return (
   <section className='py-5 '>
