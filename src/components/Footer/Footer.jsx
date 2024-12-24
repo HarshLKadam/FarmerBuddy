@@ -54,12 +54,12 @@ const Footer = () => {
         </Link></li>
       </ul>
       </div>
-      <div className="copyright flex mt-3">
-        <div>
+      <div className="copyright flex items-center mt-3 gap-2">
+        <div className='mt-[-13px]'>
         <MdOutlineCopyright style={{ fontSize: '20px' }} />
         </div>
         <div>
-        <p>2025- FarmerBuddy</p> 
+        <p>2024-2025- FarmerBuddy</p> 
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ const ItemTab = () => {
   return (
    <div className='flex justify-around '>
     
-    <div className=" ">
+    <div className="">
         <div className="">
         <h4>Popular Products</h4>
         </div>
