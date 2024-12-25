@@ -51,12 +51,12 @@ const ProductItem = () => {
                     </div>
                     <div className="info text-center">
                         <h6>
-                            <Link to='/' className='no-underline text-black transition-all'>
+                            <Link to='/productlisting' className='no-underline text-black transition-all'>
                                 Fresh Fruits
                             </Link>
                         </h6>
                         <h3>
-                            <Link to='/' className='no-underline text-black transition-all hover:text-green-500'>
+                            <Link to='/productlisting' className='no-underline text-black transition-all hover:text-green-500'>
                                 Apple
                             </Link>
                         </h3>
@@ -68,7 +68,7 @@ const ProductItem = () => {
                         </div>
                         <div className="price mt-2">
                             <h4>
-                                <Link to='/' className='no-underline text-black transition-all hover:text-green-500'>
+                                <Link to='/productlisting' className='no-underline text-black transition-all hover:text-green-500'>
                                     40Rs/kg
                                 </Link>
                             </h4>

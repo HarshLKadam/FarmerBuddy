@@ -1,0 +1,15 @@
+/* Make the RangeSlider thin */
+.custom-slider {
+    --range-slider-track-height: 4px; /* Adjust the height of the slider track */
+    --range-slider-thumb-size: 12px; /* Adjust the size of the slider thumb */
+  }
+  
+  .custom-slider .range-slider__track {
+    height: var(--range-slider-track-height);
+  }
+  
+  .custom-slider .range-slider__thumb {
+    width: var(--range-slider-thumb-size);
+    height: var(--range-slider-thumb-size);
+  }
+  
