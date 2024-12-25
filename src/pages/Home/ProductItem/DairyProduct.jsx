@@ -44,9 +44,7 @@ const DairyProduct = () => {
                             spaceBetween: 30,
                         },
                     }}
-
-
-                >
+  >
                     <SwiperSlide>
                         <div className="item w-[200px] h-[340px] border p-4 shadow-md cursor-pointer transition-all ease-in-out hover:scale-105 ml-4">
 
