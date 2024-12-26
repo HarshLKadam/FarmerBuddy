@@ -12,4 +12,8 @@
     width: var(--range-slider-thumb-size);
     height: var(--range-slider-thumb-size);
   }
+
+  .custom-slider{
+    color: rgb(74, 252, 74);
+  }
   

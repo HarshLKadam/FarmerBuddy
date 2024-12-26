@@ -10,6 +10,9 @@ import { CiGrid2H } from "react-icons/ci";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+
 const ProductListing = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -101,6 +104,12 @@ const ProductListing = () => {
                 <ListItem />
               </>
             )}
+          </div>
+          
+          <div className="pagination mt-8 border-t-2 p-4">
+          <Stack spacing={2}>
+          <Pagination count={10} />
+          </Stack>
           </div>
         </div>
       </div>
