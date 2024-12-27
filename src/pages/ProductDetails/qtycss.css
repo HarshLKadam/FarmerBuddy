@@ -1,0 +1,63 @@
+.qtybox {
+    display: flex;
+    align-items: center;
+  }
+  
+  .qtybox input[type="number"] {
+    appearance: textfield; /* Keep the native spin buttons */
+    width: 70px;
+    height: 50px;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Dark text */
+    outline: none;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    margin-right: 10px; /* Add gap from arrows */
+  }
+  
+  .qtybox input[type="number"]:hover {
+    border-color: #3e8e41; /* Darker green on hover */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6); /* Subtle green glow */
+  }
+  
+  .qtybox input[type="number"]:focus {
+    border-color: #2e7d32; /* Even darker green on focus */
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.7); /* Stronger green glow */
+  }
+  
+  .qtybox .arrows {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Gap between arrows */
+  }
+  
+  .qtybox .arrows button {
+    width: 30px; /* Bigger arrows */
+    height: 30px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White arrow icon */
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%; /* Rounded buttons */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .qtybox .arrows button:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  .qtybox .arrows button:active {
+    transform: scale(0.95); /* Pressed effect */
+  }
+  
+  

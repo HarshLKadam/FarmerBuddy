@@ -21,8 +21,11 @@ const ListItem = () => {
                     </p>
                     <h4 className='font-bold'>60Rs/Kg</h4>
                     <div className="buttons mt-4">
-                  
-                        <button className='border border-gray-400 py-2 px-10 bg-green-300 rounded-mg mt-2  hover:bg-green-500 flex gap-4'><BsCartPlus style={{ fontSize: '30px' }} /> <p className='font-bold'>Add to cart</p></button>
+
+                        <button className='py-3 px-8 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 hover:shadow-md transition-all duration-200 flex items-center gap-3'>
+                            <BsCartPlus style={{ fontSize: '24px' }} />
+                            <Link to={'/productdetails/1'}><span>Add to Cart</span></Link>
+                        </button>
                     </div>
                 </div>
             </div>
