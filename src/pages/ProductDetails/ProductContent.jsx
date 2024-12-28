@@ -6,7 +6,7 @@ import QtyBox from './QtyBox';
 
 const ProductContent = () => {
     return (
-        <div>
+        <div className='flex flex-col gap-2'>
                 <div className="p-name">
                     <h1 className='font-bold'>Apple</h1>
                 </div>

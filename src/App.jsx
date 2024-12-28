@@ -8,12 +8,14 @@ import axios from 'axios'
 import Footer from './components/Footer/Footer';
 import ProductListing from './pages/ProductListing/ProductListing';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
+import Login from './pages/Login/Login';
 
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import ProductImage from './pages/ProductDetails/productImage';
 import { IoCloseSharp } from "react-icons/io5";
 import ProductContent from './pages/ProductDetails/ProductContent';
+import Register from './pages/Register/Register';
 
 const MyContext = createContext();
 
@@ -73,6 +75,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path='/productlisting' element={<ProductListing />} />
             <Route path='/productdetails/:id' element={<ProductDetails />} />
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/register' element={<Register/>}/>
           </Routes>
           <Footer />
         </MyContext.Provider>
