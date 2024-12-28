@@ -6,14 +6,21 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import '../ProductItem/style.css'
 
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'; 
 import { Pagination,  Navigation} from 'swiper/modules';
+import { useContext } from 'react';
+
+import { MyContext } from '../../../App';
 
 
 const ProductItem = () => {
+
+    const context=useContext(MyContext)
+
     return (
         <div className='product-items ml-[80px] mr-20 mt-2 flex flex-wrap gap-4'>
 
@@ -44,7 +51,11 @@ const ProductItem = () => {
                  
 
             >
+
                 <SwiperSlide>
+                    <button onClick={()=>{
+                        context.setOpenProductModel(true)
+                    }}>
                  <div className="item w-[200px] h-[340px] border p-4 shadow-md cursor-pointer transition-all ease-in-out hover:scale-105">
                     <div className="image overflow-hidden object-cover mb-4">
                         <img src={pd3} alt="" />
@@ -75,6 +86,7 @@ const ProductItem = () => {
                         </div>
                     </div>
                 </div>
+                </button>
                 </SwiperSlide>
 
                 <SwiperSlide> <div className="item w-[200px] h-[340px] border p-4 shadow-md cursor-pointer transition-all ease-in-out hover:scale-105">
