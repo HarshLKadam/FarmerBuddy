@@ -54,7 +54,7 @@ const Header = () => {
                                 <li className='text-[18px] border px-2 shadow-sm bg-green-300'>Login</li>
                             </Link>
                             <li>/</li>
-                            <Link to="/login"
+                            <Link to="/register"
                                 className='text-black no-underline font-bold transition'>
                                 <li className='text-[18px] border px-2 shadow-sm bg-green-300'>Register</li>
                             </Link>

@@ -6,6 +6,9 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import { BsCartPlus } from "react-icons/bs";
 
+
+//this is page used to lisitng the items in row 
+
 const ListItem = () => {
     return (
         <div>
