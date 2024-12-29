@@ -10,9 +10,14 @@ import { useContext } from 'react';
 import { MyContext } from '../../App';
 import SearchBox from '../SearchBox/SearchBox.jsx';
 import Top from '../Top/Top.jsx';
-import  Navigation  from '../Navigation/Navigation.jsx';
+import Navigation from '../Navigation/Navigation.jsx';
 
 import { Link } from 'react-router-dom';
+
+import Drawer from '@mui/material/Drawer';
+import CartPanel from '../CartPanel/CartPanel.jsx';
+import { IoCloseSharp } from "react-icons/io5";
+
 
 
 const Header = () => {
@@ -63,7 +68,7 @@ const Header = () => {
 
                             <Tooltip title="Cart" arrow>
                                 <IconButton aria-label="cart"
-                                onClick={()=>context. setOpenCartPanel(true)}>
+                                    onClick={() => context.setOpenCartPanel(true)}>
                                     <StyledBadge badgeContent={1} color="primary">
                                         <IoCartOutline style={{ fontSize: '30px' }} />
                                     </StyledBadge>
@@ -83,8 +88,30 @@ const Header = () => {
 
                 </div>
             </div>
-            
-            <Navigation/>
+
+            <Navigation />
+
+
+            <Drawer 
+            open={context.openCartPanel} onClose={context.toggleDrawer(false)}
+             anchor={'right'}
+                className='cart-pannel'>
+
+                <div className="top-cart-page flex items-center justify-between py-3 px-4 gap-60 border-b border-b-gray-200">
+                    <div className="cart-heading">
+                        <h4 className='font-bold '>Shopping cart</h4>
+                    </div>
+
+                    <div className="close-button ">
+                        <button className='' onClick={() => context.setOpenCartPanel(false)}>
+                            <IoCloseSharp style={{ fontSize: '30px', color: "black" }} />
+                        </button>
+                    </div>
+                </div>
+
+                <CartPanel />
+
+            </Drawer>
         </>
     );
 }

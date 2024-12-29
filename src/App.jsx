@@ -13,20 +13,12 @@ import Login from './pages/Login/Login';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import ProductImage from './pages/ProductDetails/productImage';
-import { IoCloseSharp } from "react-icons/io5";
 import ProductContent from './pages/ProductDetails/ProductContent';
 import Register from './pages/Register/Register';
 
-import Box from '@mui/material/Box';
+import { IoCloseSharp } from "react-icons/io5";
 import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+
 
 
 
@@ -45,7 +37,7 @@ function App() {
   };
 
   //Drawer code for cart Pannel
-  const [openCartPanel, setOpenCartPanel] = useState(true);
+  const [openCartPanel, setOpenCartPanel] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpenCartPanel(newOpen);
@@ -85,7 +77,9 @@ function App() {
   const values = {
     // cityList,
     setOpenProductModel,
-    setOpenCartPanel
+    setOpenCartPanel,
+    openCartPanel,
+    toggleDrawer
   }
 
   return (
@@ -135,29 +129,14 @@ function App() {
           </div>
 
         </div>
+
       </Dialog>
 
 
 
       {/* cart pannel code  */}
 
-      <Drawer open={openCartPanel} onClose={toggleDrawer(false)} anchor={'right'}
-        className='cart-pannel'>
-
-        <div className="top-cart-page flex items-center justify-between py-3 px-4 gap-60 border-b border-b-gray-500">
-          <div className="cart-heading">
-            <h4 className='font-bold '>Shopping cart</h4>
-          </div>
-
-          <div className="close-button ">
-            <button className=''>
-              <IoCloseSharp style={{ fontSize: '30px', color: "black" }} />
-            </button>
-          </div>
-        </div>
-
-        <CartPanel />
-      </Drawer>
+      
 
     </>
   );
