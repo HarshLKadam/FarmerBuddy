@@ -1,6 +1,7 @@
 import React from 'react'
 import pd1 from '../../assets/pd3.webp'
 
+//product page where page  contains the image if product page 
 const ProductImage = () => {
     return (
         <>

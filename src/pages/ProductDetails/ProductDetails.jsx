@@ -4,12 +4,11 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { BsCartPlus } from "react-icons/bs";
 import ProductImage from './productImage';
-
-
-import QtyBox from './QtyBox';
 import ProductContent from './ProductContent';
+import Button from '@mui/material/Button';
+
+// this is main prouduct page 
 
 const ProductDetails = () => {
     return (
@@ -138,7 +137,10 @@ const ProductDetails = () => {
                         </div>
 
                         <div className="submit mt-4 ml-2">
-                            <button className=' mb-4 border w-1/8 text-center py-2 px-8 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 hover:shadow-md transition-all duration-200 flex items-center gap-2'>Submit Review</button>
+                        <Button className='flex text-black gap-4 border px-4 py-2'
+                    style={{backgroundColor:'rgb(43 255 43)'}}>
+                        <span>Submit Review</span>
+                    </Button>
                         </div>
 
                     </div>

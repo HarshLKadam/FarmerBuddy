@@ -10,19 +10,13 @@ import ProductListing from './pages/ProductListing/ProductListing';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import Login from './pages/Login/Login';
 
-import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import ProductImage from './pages/ProductDetails/productImage';
 import ProductContent from './pages/ProductDetails/ProductContent';
 import Register from './pages/Register/Register';
 
 import { IoCloseSharp } from "react-icons/io5";
-import Drawer from '@mui/material/Drawer';
 
-
-
-
-import CartPanel from './components/CartPanel/CartPanel';
 
 const MyContext = createContext();
 
