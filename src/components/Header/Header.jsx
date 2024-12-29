@@ -62,7 +62,8 @@ const Header = () => {
                         <div className='flex gap-2'>
 
                             <Tooltip title="Cart" arrow>
-                                <IconButton aria-label="cart">
+                                <IconButton aria-label="cart"
+                                onClick={()=>context. setOpenCartPanel(true)}>
                                     <StyledBadge badgeContent={1} color="primary">
                                         <IoCartOutline style={{ fontSize: '30px' }} />
                                     </StyledBadge>
