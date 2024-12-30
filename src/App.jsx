@@ -17,7 +17,10 @@ import Register from './pages/Register/Register';
 
 import { IoCloseSharp } from "react-icons/io5";
 import CartPage from './pages/CartPage/CartPage';
+import Verify from './pages/Login/Verify/Verify';
 
+import toast, { Toaster } from 'react-hot-toast';
+import ForgotPassword from './pages/Login/ForgotPassword/ForgotPassword';
 
 const MyContext = createContext();
 
@@ -37,6 +40,17 @@ function App() {
   const toggleDrawer = (newOpen) => () => {
     setOpenCartPanel(newOpen);
   };
+
+  const opentoast = (status, msg) => {
+    if (status == "success") {
+      toast.success(msg);
+    }
+    
+    if(status=='error'){
+      toast.error(msg)
+    }
+
+  }
 
   // const [cityList, setCityList] = useState([])
 
@@ -69,12 +83,15 @@ function App() {
   // }, []);
 
 
+
+
   const values = {
     // cityList,
     setOpenProductModel,
     setOpenCartPanel,
     openCartPanel,
-    toggleDrawer
+    toggleDrawer,
+    opentoast
   }
 
   return (
@@ -91,6 +108,8 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/cart' element={<CartPage />} />
+            <Route path='/verify' element={<Verify />} />
+            <Route path='/forgotpassword' element={<ForgotPassword />} />
           </Routes>
           <Footer />
         </MyContext.Provider>
@@ -128,7 +147,9 @@ function App() {
 
       </Dialog>
 
-      
+      <Toaster
+        reverseOrder={false}
+      />
 
     </>
   );
