@@ -202,8 +202,9 @@ const CartPanel = () => {
                     
 
                         <Button className='border w-1/2  p-2  text-black ' style={{ backgroundColor: 'rgb(43 255 43)' }}>
-                        <Link className='no-underline text-black'
-                        to='/'
+                        <Link
+                         className='no-underline text-black'
+                        to='/checkout'
                         >CheckOut </Link>
                         </Button>
 
