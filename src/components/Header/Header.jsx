@@ -17,6 +17,7 @@ import { Link } from 'react-router-dom';
 import Drawer from '@mui/material/Drawer';
 import CartPanel from '../CartPanel/CartPanel.jsx';
 import { IoCloseSharp } from "react-icons/io5";
+import MyAccount from '../../pages/MyAccountPage/MyAccount.jsx';
 
 
 
@@ -52,18 +53,28 @@ const Header = () => {
                         <SearchBox />
                     </div>
 
+
                     <div className="third  w-[30%] flex justify-evenly items-center">
-                        <ul className='flex gap-2 mt-3 '>
-                            <Link to="/login"
-                                className='text-black no-underline font-bold transition'>
-                                <li className='text-[18px] border px-2 shadow-sm bg-green-300'>Login</li>
-                            </Link>
-                            <li>/</li>
-                            <Link to="/register"
-                                className='text-black no-underline font-bold transition'>
-                                <li className='text-[18px] border px-2 shadow-sm bg-green-300'>Register</li>
-                            </Link>
-                        </ul>
+
+                        {
+                            context.isLogin === false ?
+                                <ul className='flex gap-2 mt-3 '>
+                                    <Link to="/login"
+                                        className='text-black no-underline font-bold transition'>
+                                        <li className='text-[18px] border px-2 shadow-sm bg-green-300'>Login</li>
+                                    </Link>
+                                    <li>/</li>
+                                    <Link to="/register"
+                                        className='text-black no-underline font-bold transition'>
+                                        <li className='text-[18px] border px-2 shadow-sm bg-green-300'>Register</li>
+                                    </Link>
+                                </ul>
+                                :
+                                <MyAccount/>
+
+                        }
+
+
                         <div className='flex gap-2'>
 
                             <Tooltip title="Cart" arrow>
@@ -92,9 +103,9 @@ const Header = () => {
             <Navigation />
 
 
-            <Drawer 
-            open={context.openCartPanel} onClose={context.toggleDrawer(false)}
-             anchor={'right'}
+            <Drawer
+                open={context.openCartPanel} onClose={context.toggleDrawer(false)}
+                anchor={'right'}
                 className='cart-pannel'>
 
                 <div className="top-cart-page flex items-center justify-between py-3 px-4 gap-60 border-b border-b-gray-200">
