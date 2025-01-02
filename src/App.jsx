@@ -25,6 +25,7 @@ import CheckOut from './pages/CheckOut/CheckOut';
 import MyAccount from './pages/MyAccountPage/MyAccount';
 import UserAccount from './pages/MyAccountPage/UserAccount';
 import ListPage from './pages/MyAccountPage/ListPage';
+import MyOrders from './pages/MyAccountPage/MyOrders';
 
 const MyContext = createContext();
 
@@ -121,6 +122,7 @@ function App() {
             <Route path='/account' element={<MyAccount />} />
             <Route path='/useraccount' element={<UserAccount />} />
             <Route path='/userlist' element={<ListPage />} />
+            <Route path='/order' element={<MyOrders />} />
           </Routes>
           <Footer />
         </MyContext.Provider>

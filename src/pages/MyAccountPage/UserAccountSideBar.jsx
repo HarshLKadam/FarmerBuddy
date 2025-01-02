@@ -38,12 +38,8 @@ const UserAccountSideBar = () => {
 
                         <li className="w-full border p-2 rounded-lg">
                             <NavLink
-                                to="/useraccount"
-                                className={({ isActive }) =>
-                                    isActive ? "text-green-600" : "text-black"
-                                }
-                            >
-                                <Button className="px-20 w-full">
+                                to="/useraccount">
+                                <Button className='px-20 w-full  text-black'>
                                     My Profile
                                 </Button>
                             </NavLink>
@@ -52,9 +48,7 @@ const UserAccountSideBar = () => {
 
                         <li className='w-full border p-2 rounded-lg'>
                             <NavLink to='/userlist'
-                                className={({ isActive }) =>
-                                    isActive ? "text-green-600" : "text-black"
-                                }>
+                            >
                                 <Button className='px-20 w-full  text-black'>
                                     My List
                                 </Button>
@@ -63,9 +57,7 @@ const UserAccountSideBar = () => {
 
                         <li className='w-full border p-2 rounded-lg '>
                             <NavLink to='/order'
-                                className={({ isActive }) =>
-                                    isActive ? "text-green-600" : "text-black"
-                                }>
+                            >
                                 <Button className='px-20 w-full text-black'>
                                     My order
                                 </Button>
