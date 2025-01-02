@@ -24,6 +24,7 @@ import ForgotPassword from './pages/Login/ForgotPassword/ForgotPassword';
 import CheckOut from './pages/CheckOut/CheckOut';
 import MyAccount from './pages/MyAccountPage/MyAccount';
 import UserAccount from './pages/MyAccountPage/UserAccount';
+import ListPage from './pages/MyAccountPage/ListPage';
 
 const MyContext = createContext();
 
@@ -119,6 +120,7 @@ function App() {
             <Route path='/checkout' element={<CheckOut />} />
             <Route path='/account' element={<MyAccount />} />
             <Route path='/useraccount' element={<UserAccount />} />
+            <Route path='/userlist' element={<ListPage />} />
           </Routes>
           <Footer />
         </MyContext.Provider>
