@@ -1,19 +1,37 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { HiOutlineShieldCheck } from "react-icons/hi2";
 import OtpBox from '../../../components/OtpBox/OtpBox';
 import Button from '@mui/material/Button';
+import { postData } from '../../../utils/api';
+import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../../../App';
 
 const Verify = () => {
     const [otp, setOtp] = useState("");
+    
+    const context=useContext(MyContext)
+    const navigateTo=useNavigate()
 
     const handleOtpChange = (value) => {
         setOtp(value);
-        console.log("Current OTP:", value);
     };
 
     const VerifyOTP=(e)=>{
         e.preventDefault();
-        alert(otp)
+        postData("/api/user/verifyEmail",{
+            email:localStorage.getItem("userEmail"),
+            otp:otp
+        }).then((res)=>{
+            if(res?.error===false){
+                context.opentoast("success", res?.message)
+                localStorage.removeItem("userEmail")
+                navigateTo('/login')
+            }
+            else{
+                context.opentoast("error", res?.message)
+            }
+        })
+
     }
 
     return (
@@ -26,7 +44,11 @@ const Verify = () => {
                     </h4>
 
                     <p className='text-center mb-4 text-green-500'>OTP send to
-                        <span className='font-bold text-[18px] ml-2'>farmer@gmail.com</span>
+                        <span className='font-bold text-[18px] ml-2'>
+                            {
+                            localStorage.getItem("userEmail")
+                            }
+                            </span>
                     </p>
 
 

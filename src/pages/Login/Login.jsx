@@ -43,7 +43,6 @@ const Login = () => {
     //for password forgot 
     const forgotPassword = () => {
         context.opentoast('success','OTP sended successfully')
-        // context.opentoast('error','error')
         navigate('/verify')
 
     }
@@ -109,7 +108,7 @@ const Login = () => {
 
 
                             <p className='ml-3 mt-4 hover:text-green-400 cursor-pointer'
-                                onClick={forgotPassword()}> Forgat Password ?
+                                onClick={forgotPassword}> Forgat Password ?
                             </p>
 
 

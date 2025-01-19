@@ -34,7 +34,9 @@ function App() {
   const [openProductModel, setOpenProductModel] = useState(false);
   const [fullWidth, setFullWidth] = useState(true);
   const [maxWidth, setMaxWidth] = useState('lg');
-  const[isLogin,setisLogin]=useState(true)
+  const[isLogin,setisLogin]=useState(false)
+
+  const apiUrl=import.meta.env.VITE_API_URL;
 
   const handleClose = () => {
     setOpenProductModel(false);
@@ -99,7 +101,8 @@ function App() {
     toggleDrawer,
     opentoast,
     isLogin,
-    setisLogin
+    setisLogin,
+    apiUrl
   }
 
   return (
