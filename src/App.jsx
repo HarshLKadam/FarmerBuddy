@@ -26,6 +26,7 @@ import MyAccount from './pages/MyAccountPage/MyAccount';
 import UserAccount from './pages/MyAccountPage/UserAccount';
 import ListPage from './pages/MyAccountPage/ListPage';
 import MyOrders from './pages/MyAccountPage/MyOrders';
+import { fetchDateFromApi } from './utils/api';
 
 const MyContext = createContext();
 
@@ -35,6 +36,7 @@ function App() {
   const [fullWidth, setFullWidth] = useState(true);
   const [maxWidth, setMaxWidth] = useState('lg');
   const[isLogin,setisLogin]=useState(false)
+  const[userData,setUserData]=useState(null)
 
   const apiUrl=import.meta.env.VITE_API_URL;
 
@@ -57,8 +59,22 @@ function App() {
     if(status=='error'){
       toast.error(msg)
     }
-
   }
+
+  useEffect(()=>{
+    const token=localStorage.getItem('accessToken')
+    if(token!==undefined && token !==null && token !==""){
+      setisLogin(true)
+
+      fetchDateFromApi(`/api/user/user-details?token=${localStorage.getItem('accessToken')}`)
+      .then((res)=>{
+        setUserData(res.data)
+      })
+    }
+    else{
+      setisLogin(false)
+    }
+  },[isLogin])
 
   // const [cityList, setCityList] = useState([])
 
@@ -90,9 +106,6 @@ function App() {
   //   getCountry(url);
   // }, []);
 
-
-
-
   const values = {
     // cityList,
     setOpenProductModel,
@@ -102,7 +115,9 @@ function App() {
     opentoast,
     isLogin,
     setisLogin,
-    apiUrl
+    apiUrl,
+    userData,
+    setUserData
   }
 
   return (

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { MdOutlineAccountCircle } from "react-icons/md";
@@ -9,18 +9,41 @@ import { Link } from 'react-router-dom';
 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { fetchDateFromApi, postData } from '../../utils/api';
+import { MyContext } from '../../App';
 
 
 //this is user account header component 
+
+
+
 const MyAccount = () => {
     const [anchorEl, setAnchorEl] = useState(null);
+
     const open = Boolean(anchorEl);
+
+    const context = useContext(MyContext)
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    const logout = () => {
+        setAnchorEl(null);
+        fetchDateFromApi(`/api/user/logout?token=${localStorage.getItem('accessToken')}`, { withCredentials: true })
+            .then((res) => {
+                console.log(res)
+                if (res?.error !== true) {
+                    localStorage.removeItem("accessToken", res?.data?.accessToken)
+                    localStorage.removeItem("refreshToken", res?.data?.refreshToken)
+                    context.setisLogin(false)
+                }
+            })
+
+    }
 
     return (
         <>
@@ -37,8 +60,16 @@ const MyAccount = () => {
                 </div>
 
                 <div className="info flex flex-col ">
-                    <span className="text-[16px] font-[400] mt-2 mb-0 text-left justify-start">Farmer Buddy</span>
-                    <p className=" text-gray-600 lowercase text-left justify-start">farmer@gmail.com</p>
+                    <span className="text-[16px] font-[400] mt-2 mb-0 text-left justify-start">
+                        {
+                            context.userData?.name
+                        }
+                    </span>
+                    <p className=" text-gray-600 lowercase text-left justify-start">
+                        {
+                                context.userData?.email       
+                        }
+                    </p>
                 </div>
 
 
@@ -80,19 +111,19 @@ const MyAccount = () => {
                     },
                 }}
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}     
+                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-                <Link 
-                className='no-underline text-black'
-                to='/useraccount'>
-                <MenuItem onClick={handleClose}>
-                    <MdOutlineAccountCircle
-                        style={{
-                            fontSize: '30px',
-                            color: 'rgb(92, 90, 90)',
-                        }}
-                        className='font-thin mr-2' /> My Account
-                </MenuItem>
+                <Link
+                    className='no-underline text-black'
+                    to='/useraccount'>
+                    <MenuItem onClick={handleClose}>
+                        <MdOutlineAccountCircle
+                            style={{
+                                fontSize: '30px',
+                                color: 'rgb(92, 90, 90)',
+                            }}
+                            className='font-thin mr-2' /> My Account
+                    </MenuItem>
                 </Link>
 
                 <MenuItem onClick={handleClose}>
@@ -103,9 +134,9 @@ const MyAccount = () => {
                     <CiHeart style={{ fontSize: '30px' }}
                         className='mr-2' /> My List
                 </MenuItem>
-                <MenuItem onClick={handleClose}>
-                <IoMdLogOut style={{ fontSize: '30px' }}
-                        className='mr-2'/>
+                <MenuItem onClick={logout}>
+                    <IoMdLogOut style={{ fontSize: '30px' }}
+                        className='mr-2' />
                     Logout
                 </MenuItem>
             </Menu>
