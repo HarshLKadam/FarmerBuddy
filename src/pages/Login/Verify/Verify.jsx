@@ -8,29 +8,46 @@ import { MyContext } from '../../../App';
 
 const Verify = () => {
     const [otp, setOtp] = useState("");
-    
-    const context=useContext(MyContext)
-    const navigateTo=useNavigate()
+
+    const context = useContext(MyContext)
+    const navigateTo = useNavigate()
 
     const handleOtpChange = (value) => {
         setOtp(value);
     };
 
-    const VerifyOTP=(e)=>{
+    const VerifyOTP = (e) => {
         e.preventDefault();
-        postData("/api/user/verifyEmail",{
-            email:localStorage.getItem("userEmail"),
-            otp:otp
-        }).then((res)=>{
-            if(res?.error===false){
-                context.opentoast("success", res?.message)
-                localStorage.removeItem("userEmail")
-                navigateTo('/login')
-            }
-            else{
-                context.opentoast("error", res?.message)
-            }
-        })
+        const actionType = localStorage.getItem("actionType")
+
+        if (actionType !== "forgot-password") {
+            postData("/api/user/verifyEmail", {
+                email: localStorage.getItem("userEmail"),
+                otp: otp
+            }).then((res) => {
+                if (res?.error === false) {
+                    context.opentoast("success", res?.message)
+                    navigateTo('/login')
+                }
+                else {
+                    context.opentoast("error", res?.message)
+                }
+            })
+        }
+        else {
+            postData("/api/user/verify-forgot-password-otp", {
+                email: localStorage.getItem("userEmail"),
+                otp: otp
+            }).then((res) => {
+                if (res?.error === false) {
+                    context.opentoast("success", res?.message)
+                    navigateTo('/forgotpassword')
+                }
+                else {
+                    context.opentoast("error", res?.message)
+                }
+            })
+        }
 
     }
 
@@ -46,13 +63,14 @@ const Verify = () => {
                     <p className='text-center mb-4 text-green-500'>OTP send to
                         <span className='font-bold text-[18px] ml-2'>
                             {
-                            localStorage.getItem("userEmail")
+                                localStorage.getItem("userEmail")
                             }
-                            </span>
+                        </span>
                     </p>
 
 
                     <form onSubmit={VerifyOTP}>
+                        {/* otp box from component is used here  */}
                         <OtpBox length={6} onChange={handleOtpChange} />
 
                         <div className="flex items-center justify-center">

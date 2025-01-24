@@ -40,16 +40,37 @@ const Login = () => {
         event.preventDefault();
     };
 
-    //for password forgot 
-    const forgotPassword = () => {
-        context.opentoast('success', 'OTP sended successfully')
-        navigateTo('/verify')
-    }
-
     const [formFields, setFormFields] = useState({
         email: "",
         password: ""
     })
+    //for password forgot 
+    const forgotPassword = () => {
+        if (formFields.email === "") {
+            context.opentoast("error", "Please Provide Email")
+            return false
+        }
+        else {
+            localStorage.setItem("userEmail", formFields.email)
+            localStorage.setItem("actionType", "forgot-password")
+
+            postData("/api/user/forgot-password", {
+                email: formFields.email
+            }).then((res) => {
+                if (res?.error === false) {
+                    context.opentoast("success", res?.message)
+                    navigateTo('/verify')
+                }
+                else {
+                    context.opentoast("error", res?.message)
+                }
+            })
+
+            context.opentoast('success', `OTP sended successfully to ${formFields.email}`)
+        }
+    }
+
+
 
     const onChangeInput = (e) => {
         const { name, value } = e.target
@@ -74,8 +95,8 @@ const Login = () => {
         if (formFields.password === "") {
             context.opentoast("error", "Please Provide password")
         }
-        postData('/api/user/login', formFields,{withCredentials:true})
-            .then((res) => { 
+        postData('/api/user/login', formFields, { withCredentials: true })
+            .then((res) => {
                 console.log(res)
                 if (res?.error !== true) {
                     context.opentoast("success", res?.message)
@@ -85,8 +106,8 @@ const Login = () => {
                         email: "",
                         password: ""
                     })
-                    localStorage.setItem("accessToken",res?.data?.accessToken)
-                    localStorage.setItem("refreshToken",res?.data?.refreshToken)
+                    localStorage.setItem("accessToken", res?.data?.accessToken)
+                    localStorage.setItem("refreshToken", res?.data?.refreshToken)
                     navigateTo('/')
                     context.setisLogin(true)
                 }
