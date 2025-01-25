@@ -1,16 +1,25 @@
-import React from 'react'
-import user from '../../assets/user1.png'
+import React, { useContext, useEffect } from 'react'
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
-import { FaCloudUploadAlt } from "react-icons/fa";
 import Button from '@mui/material/Button';
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom'
 import UserAccountSideBar from './UserAccountSideBar';
+import { MyContext } from '../../App';
+import { useNavigate } from 'react-router-dom';
+
 
 //this is account page 
 const UserAccount = () => {
+
+    const context=useContext(MyContext)
+    const navigateTo=useNavigate()
+
+    useEffect(()=>{
+        const token=localStorage.getItem("accessToken")
+        if(token===null){
+            navigateTo("/")
+        }
+    },[context.isLogin])
 
     return (
         <div className='py-10 w-full'>

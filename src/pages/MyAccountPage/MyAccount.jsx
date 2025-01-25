@@ -5,7 +5,7 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { IoMdLogOut } from "react-icons/io";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -23,6 +23,7 @@ const MyAccount = () => {
     const open = Boolean(anchorEl);
 
     const context = useContext(MyContext)
+    const navigateTo=useNavigate()
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -33,6 +34,7 @@ const MyAccount = () => {
 
     const logout = () => {
         setAnchorEl(null);
+
         fetchDataFromApi(`/api/user/logout?token=${localStorage.getItem('accessToken')}`, { withCredentials: true })
             .then((res) => {
                 console.log(res)
@@ -40,6 +42,7 @@ const MyAccount = () => {
                     localStorage.removeItem("accessToken", res?.data?.accessToken)
                     localStorage.removeItem("refreshToken", res?.data?.refreshToken)
                     context.setisLogin(false)
+                    navigateTo('/')
                 }
             })
 

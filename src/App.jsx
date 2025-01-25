@@ -66,7 +66,7 @@ function App() {
     if(token!==undefined && token !==null && token !==""){
       setisLogin(true)
 
-      fetchDataFromApi(`/api/user/user-details?token=${localStorage.getItem('accessToken')}`)
+      fetchDataFromApi(`/api/user/user-details`)
       .then((res)=>{
         setUserData(res.data)
       })
