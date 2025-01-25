@@ -26,7 +26,7 @@ import MyAccount from './pages/MyAccountPage/MyAccount';
 import UserAccount from './pages/MyAccountPage/UserAccount';
 import ListPage from './pages/MyAccountPage/ListPage';
 import MyOrders from './pages/MyAccountPage/MyOrders';
-import { fetchDateFromApi } from './utils/api';
+import { fetchDataFromApi } from './utils/api';
 
 const MyContext = createContext();
 
@@ -66,7 +66,7 @@ function App() {
     if(token!==undefined && token !==null && token !==""){
       setisLogin(true)
 
-      fetchDateFromApi(`/api/user/user-details?token=${localStorage.getItem('accessToken')}`)
+      fetchDataFromApi(`/api/user/user-details?token=${localStorage.getItem('accessToken')}`)
       .then((res)=>{
         setUserData(res.data)
       })

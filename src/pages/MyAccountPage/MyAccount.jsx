@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { fetchDateFromApi, postData } from '../../utils/api';
+import { fetchDataFromApi, postData } from '../../utils/api';
 import { MyContext } from '../../App';
 
 
@@ -33,7 +33,7 @@ const MyAccount = () => {
 
     const logout = () => {
         setAnchorEl(null);
-        fetchDateFromApi(`/api/user/logout?token=${localStorage.getItem('accessToken')}`, { withCredentials: true })
+        fetchDataFromApi(`/api/user/logout?token=${localStorage.getItem('accessToken')}`, { withCredentials: true })
             .then((res) => {
                 console.log(res)
                 if (res?.error !== true) {

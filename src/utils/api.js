@@ -27,7 +27,7 @@ export const postData = async (url, formData) => {
     }
 }
 
-export const fetchDateFromApi=async(url)=>{
+export const fetchDataFromApi=async(url)=>{
     try{
         const {data}=await axios.get(apiUrl+url,
         {
