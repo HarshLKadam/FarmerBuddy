@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { NavLink } from 'react-router-dom'
 import { MyContext } from '../../App';
 import CircularProgress from '@mui/material/CircularProgress';
-import { editData } from '../../utils/api.js';
+import { uploadImage } from '../../utils/api.js';
 
 //this is side bar of user account where user account information is stored 
 const UserAccountSideBar = () => {
@@ -14,8 +14,7 @@ const UserAccountSideBar = () => {
 
     const context = useContext(MyContext)
 
-    useEffect(()=>{
-        
+    useEffect(()=>{     
         const userAvatar=[]
         userAvatar.push(context?.userData?.avatar)
         setPreview(userAvatar)
@@ -45,7 +44,7 @@ const UserAccountSideBar = () => {
                     selectedImages.push(file);
                     formdata.append('avatar', file);
 
-                    await editData(apiEndPoint, formdata)
+                    await uploadImage(apiEndPoint, formdata)
                         .then((res) => {
                             console.log('Response:', res);
 

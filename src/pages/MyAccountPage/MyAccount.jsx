@@ -15,8 +15,6 @@ import { MyContext } from '../../App';
 
 //this is user account header component 
 
-
-
 const MyAccount = () => {
     const [anchorEl, setAnchorEl] = useState(null);
 
@@ -35,7 +33,7 @@ const MyAccount = () => {
     const logout = () => {
         setAnchorEl(null);
 
-        fetchDataFromApi(`/api/user/logout?token=${localStorage.getItem('accessToken')}`, { withCredentials: true })
+        fetchDataFromApi(`/api/user/logout`, { withCredentials: true })
             .then((res) => {
                 console.log(res)
                 if (res?.error !== true) {

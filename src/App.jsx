@@ -68,13 +68,13 @@ function App() {
 
       fetchDataFromApi(`/api/user/user-details`)
       .then((res)=>{
-        setUserData(res.data)
+        setUserData(res?.data)
       })
     }
     else{
       setisLogin(false)
     }
-  },[])
+  },[isLogin])
 
   // const [cityList, setCityList] = useState([])
 

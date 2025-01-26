@@ -44,7 +44,7 @@ export const fetchDataFromApi=async(url)=>{
     }
 }
 
-export const editData = async (url, updateData) => {
+export const uploadImage = async (url, updateData) => {
     console.log(localStorage.getItem('accessToken'))
     try{
         const params={
@@ -62,4 +62,22 @@ export const editData = async (url, updateData) => {
         return error
     }
 };
+
+export const editData=async(url,updateData)=>{
+    try{
+        const params={
+            headers:{
+                "Authorization":`Bearer ${localStorage.getItem('accessToken')}`,
+                'Content-Type':'application/json'
+            },
+        }
+        const {data}=await axios.put(apiUrl+url,updateData,params)
+        return data;
+        
+    }
+    catch(error){
+        console.log(error);
+        return error
+    }
+}
 

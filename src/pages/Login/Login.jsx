@@ -118,8 +118,6 @@ const Login = () => {
             })
     };
 
-
-
     return (
         <div className='py-10 '>
             <div className="container">
