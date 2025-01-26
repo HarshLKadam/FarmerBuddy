@@ -74,7 +74,7 @@ function App() {
     else{
       setisLogin(false)
     }
-  },[isLogin])
+  },[])
 
   // const [cityList, setCityList] = useState([])
 
